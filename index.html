@@ -5,6 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS-Only 3D Minecraft Steve</title>
+</head>
+
+<body>
+    <div class="hover-area">
+        <div class="x1y1"></div>
+        <div class="x1y2"></div>
+        <div class="x1y3"></div>
+        <div class="x1y4"></div>
+        <div class="x1y5"></div>
+        <div class="x2y1"></div>
+        <div class="x2y2"></div>
+        <div class="x2y3"></div>
+        <div class="x2y4"></div>
+        <div class="x2y5"></div>
+        <div class="x3y1"></div>
+        <div class="x3y2"></div>
+        <div class="x3y3"></div>
+        <div class="x3y4"></div>
+        <div class="x3y5"></div>
+        <div class="x4y1"></div>
+        <div class="x4y2"></div>
+        <div class="x4y3"></div>
+        <div class="x4y4"></div>
+        <div class="x4y5"></div>
+        <div class="x5y1"></div>
+        <div class="x5y2"></div>
+        <div class="x5y3"></div>
+        <div class="x5y4"></div>
+        <div class="x5y5"></div>
+
+        <div class="steve">
+            <div class="cube head">
+                <div class="face front"></div>
+                <div class="face back"></div>
+                <div class="face left"></div>
+                <div class="face right"></div>
+                <div class="face top"></div>
+                <div class="face bottom"></div>
+            </div>
+
+            <div class="cube torso">
+                <div class="face front"></div>
+                <div class="face bottom"></div>
+            </div>
+
+            <div class="cube arm left-arm">
+                <div class="face front"></div>
+                <div class="face left"></div>
+                <div class="face top"></div>
+                <div class="face bottom"></div>
+            </div>
+
+            <div class="cube arm right-arm">
+                <div class="face front"></div>
+                <div class="face right"></div>
+                <div class="face top"></div>
+                <div class="face bottom"></div>
+            </div>
+
+            <div class="cube leg left-leg">
+                <div class="face front"></div>
+                <div class="face left"></div>
+                <div class="face top"></div>
+                <div class="face bottom"></div>
+            </div>
+
+            <div class="cube leg right-leg">
+                <div class="face front"></div>
+                <div class="face right"></div>
+                <div class="face bottom"></div>
+            </div>
+        </div>
+    </div>
+
     <style>
         body {
             margin: 0;
@@ -15,7 +89,7 @@
             place-items: center;
             /* cursor: url("./golden-apple-80x80.webp") 40 40, auto; */
         }
-
+    
         .hover-area {
             position: fixed;
             inset: 0;
@@ -23,113 +97,108 @@
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: repeat(5, 1fr);
             z-index: 100;
-
-            /* Row 1 (Top) */
-            .r1c1:hover~.steve {
+    
+            .x1y1:hover~.steve {
                 transform: rotateX(15deg) rotateY(-35deg);
             }
-
-            .r1c2:hover~.steve {
+    
+            .x1y2:hover~.steve {
                 transform: rotateX(15deg) rotateY(-15deg);
             }
-
-            .r1c3:hover~.steve {
+    
+            .x1y3:hover~.steve {
                 transform: rotateX(15deg) rotateY(0deg);
             }
-
-            .r1c4:hover~.steve {
+    
+            .x1y4:hover~.steve {
                 transform: rotateX(15deg) rotateY(15deg);
             }
-
-            .r1c5:hover~.steve {
+    
+            .x1y5:hover~.steve {
                 transform: rotateX(15deg) rotateY(35deg);
             }
-
-            /* Row 2 */
-            .r2c1:hover~.steve {
+    
+            .x2y1:hover~.steve {
                 transform: rotateX(5deg) rotateY(-35deg);
             }
-
-            .r2c2:hover~.steve {
+    
+            .x2y2:hover~.steve {
                 transform: rotateX(5deg) rotateY(-15deg);
             }
-
-            .r2c3:hover~.steve {
+    
+            .x2y3:hover~.steve {
                 transform: rotateX(5deg) rotateY(0deg);
             }
-
-            .r2c4:hover~.steve {
+    
+            .x2y4:hover~.steve {
                 transform: rotateX(5deg) rotateY(15deg);
             }
-
-            .r2c5:hover~.steve {
+    
+            .x2y5:hover~.steve {
                 transform: rotateX(5deg) rotateY(35deg);
             }
-
-            /* Row 3 (Center) */
-            .r3c1:hover~.steve {
+    
+            .x3y1:hover~.steve {
                 transform: rotateX(-10deg) rotateY(-35deg);
             }
-
-            .r3c2:hover~.steve {
+    
+            .x3y2:hover~.steve {
                 transform: rotateX(-10deg) rotateY(-15deg);
             }
-
-            .r3c3:hover~.steve {
+    
+            .x3y3:hover~.steve {
                 transform: rotateX(-10deg) rotateY(0deg);
             }
-
-            .r3c4:hover~.steve {
+    
+            .x3y4:hover~.steve {
                 transform: rotateX(-10deg) rotateY(15deg);
             }
-
-            .r3c5:hover~.steve {
+    
+            .x3y5:hover~.steve {
                 transform: rotateX(-10deg) rotateY(35deg);
             }
-
-            /* Row 4 */
-            .r4c1:hover~.steve {
+    
+            .x4y1:hover~.steve {
                 transform: rotateX(-20deg) rotateY(-35deg);
             }
-
-            .r4c2:hover~.steve {
+    
+            .x4y2:hover~.steve {
                 transform: rotateX(-20deg) rotateY(-15deg);
             }
-
-            .r4c3:hover~.steve {
+    
+            .x4y3:hover~.steve {
                 transform: rotateX(-20deg) rotateY(0deg);
             }
-
-            .r4c4:hover~.steve {
+    
+            .x4y4:hover~.steve {
                 transform: rotateX(-20deg) rotateY(15deg);
             }
-
-            .r4c5:hover~.steve {
+    
+            .x4y5:hover~.steve {
                 transform: rotateX(-20deg) rotateY(35deg);
             }
-
-            /* Row 5 (Bottom) */
-            .r5c1:hover~.steve {
+    
+            .x5y1:hover~.steve {
                 transform: rotateX(-30deg) rotateY(-35deg);
             }
-
-            .r5c2:hover~.steve {
+    
+            .x5y2:hover~.steve {
                 transform: rotateX(-30deg) rotateY(-15deg);
             }
-
-            .r5c3:hover~.steve {
+    
+            .x5y3:hover~.steve {
                 transform: rotateX(-30deg) rotateY(0deg);
             }
-
-            .r5c4:hover~.steve {
+    
+            .x5y4:hover~.steve {
                 transform: rotateX(-30deg) rotateY(15deg);
             }
-
-            .r5c5:hover~.steve {
+    
+            .x5y5:hover~.steve {
                 transform: rotateX(-30deg) rotateY(35deg);
             }
         }
-
+    
         .steve {
             --pupil: #473581;
             --hair: #3c2212;
@@ -145,7 +214,7 @@
             --shirt-dark: #008282;
             --pant-dark: #18309c;
             --shoe-dark: #3a3a3a;
-
+    
             position: absolute;
             left: 50%;
             top: 50%;
@@ -155,30 +224,29 @@
             transform-style: preserve-3d;
             pointer-events: none;
             transition: transform 0.25s ease-out;
-            transform: rotateX(-10deg) rotateY(0deg);
-
+    
             .cube {
                 position: absolute;
                 transform-style: preserve-3d;
             }
-
+    
             .face {
                 position: absolute;
                 box-sizing: border-box;
                 image-rendering: pixelated;
             }
-
+    
             .head {
                 width: 80px;
                 height: 80px;
                 top: 40px;
                 left: 60px;
-
+    
                 .face {
                     width: 80px;
                     height: 80px;
                 }
-
+    
                 .front {
                     transform: translateZ(40px);
                     background:
@@ -201,44 +269,56 @@
                         var(--skin);
                     background-repeat: no-repeat;
                 }
-
+    
                 .back {
                     transform: rotateY(180deg) translateZ(40px);
                     background: var(--hair);
                 }
-
+    
                 .left {
                     transform: rotateY(-90deg) translateZ(40px);
-                    background: var(--hair-dark);
-                }
-
+                    background: 
+                        linear-gradient(var(--skin-dark)) 0px 70px / 80px 10px,
+                        linear-gradient(var(--skin-dark)) 30px 60px / 50px 20px,
+                        linear-gradient(var(--skin-dark)) 50px 50px / 30px 20px,
+                        linear-gradient(var(--skin-dark)) 50px 40px / 20px 20px,
+                        var(--hair-dark);
+                        background-repeat: no-repeat;
+                    }
+                    
                 .right {
                     transform: rotateY(90deg) translateZ(40px);
-                    background: var(--hair-dark);
+                    background: 
+                        linear-gradient(var(--skin-dark)) 0px 70px / 80px 10px,
+                        linear-gradient(var(--skin-dark)) 0px 60px / 50px 20px,
+                        linear-gradient(var(--skin-dark)) 0px 50px / 30px 20px,
+                        linear-gradient(var(--skin-dark)) 10px 40px / 20px 20px,
+                        var(--hair-dark);
+                    background-repeat: no-repeat;
                 }
-
+    
                 .top {
                     transform: rotateX(90deg) translateZ(40px);
                     background: var(--hair);
                 }
-
+    
                 .bottom {
                     transform: rotateX(-90deg) translateZ(40px);
                     background: var(--skin-dark);
                 }
             }
-
+    
             .torso {
                 width: 80px;
                 height: 120px;
                 top: 120px;
                 left: 60px;
-
+    
                 .face {
                     width: 80px;
                     height: 120px;
                 }
-
+    
                 /* This face is not visible but is kept there to 
                    handle subpixel rendering issue around the untucked shirt */
                 .bottom {
@@ -247,240 +327,128 @@
                     background: linear-gradient(var(--shirt)) 60px 0px / 20px 40px;
                     background-repeat: no-repeat;
                 }
-
+    
                 .front {
                     transform: translateZ(20px);
                     background:
-                        /* Neck skin */
+                        /* Chest */
                         linear-gradient(var(--skin)) 30px 0px / 20px 10px,
                         linear-gradient(var(--skin)) 20px 0px / 40px 5px,
                         var(--shirt);
                     background-repeat: no-repeat;
                 }
             }
-
-            
-
-
+    
+    
+    
+    
             .arm {
                 width: 40px;
                 height: 120px;
                 top: 120px;
+    
+                .face {
+                    width: 40px;
+                    height: 120px;
+                }
+    
+                .top,
+                .bottom {
+                    height: 40px;
+                }
+    
+                .front {
+                    transform: translateZ(20px);
+                    background: linear-gradient(to bottom, var(--shirt) 60px, var(--skin) 60px);
+                }
+    
+                .left {
+                    transform: rotateY(-90deg) translateZ(20px);
+                }
+    
+                .right {
+                    transform: rotateY(90deg) translateZ(20px);
+                }
+    
+                .top {
+                    transform: rotateX(90deg) translateZ(20px);
+                    background: var(--shirt);
+                }
+    
+                .bottom {
+                    transform: rotateX(-90deg) translateZ(100px);
+                    background: var(--skin-dark);
+                }
+    
+    
+                .left {
+                    background: linear-gradient(to bottom, var(--shirt-dark) 60px, var(--skin-dark) 60px);
+                }
+    
+                .right {
+                    background: linear-gradient(to bottom, var(--shirt-dark) 60px, var(--skin-dark) 60px);
+                }
+    
+                &.left-arm {
+                    left: 20px;
+    
+                }
+    
+                &.right-arm {
+                    left: 140px;
+    
+                }
             }
-
-            .arm .face {
-                width: 40px;
-                height: 120px;
-            }
-
-            .arm .top,
-            .arm .bottom {
-                height: 40px;
-            }
-
-            .arm.left-arm {
-                left: 20px;
-            }
-
-            .arm.right-arm {
-                left: 140px;
-            }
-
-            .arm .face.side-design {
-                background: linear-gradient(to bottom, var(--shirt) 60px, var(--skin) 60px);
-            }
-
-            .arm .face.side-design-dark {
-                background: linear-gradient(to bottom, var(--shirt-dark) 60px, var(--skin-dark) 60px);
-            }
-
-            .arm .front {
-                transform: translateZ(20px);
-            }
-
-            .arm .back {
-                transform: rotateY(180deg) translateZ(20px);
-            }
-
-            .arm .left {
-                transform: rotateY(-90deg) translateZ(20px);
-            }
-
-            .arm .right {
-                transform: rotateY(90deg) translateZ(20px);
-            }
-
-            .arm .top {
-                transform: rotateX(90deg) translateZ(20px);
-                background: var(--shirt);
-            }
-
-            .arm .bottom {
-                transform: rotateX(-90deg) translateZ(100px);
-                background: var(--skin);
-            }
-
+    
             .leg {
                 width: 40px;
                 height: 120px;
                 top: 240px;
-            }
-
-            .leg .face {
-                width: 40px;
-                height: 120px;
-            }
-
-            .leg .top,
-            .leg .bottom {
-                height: 40px;
-            }
-
-            .leg.left-leg {
-                left: 60px;
-            }
-
-            .leg.right-leg {
-                left: 100px;
-            }
-
-            .leg .face.leg-design {
-                background: 
-                    linear-gradient(to bottom, var(--pant) 100px, var(--shoe) 100px)
-                ;
-            }
-
-            .right-leg .front.face {
-                background: 
-                    linear-gradient(var(--shirt)) 30px 0px / 10px 10px,
-                    linear-gradient(var(--shirt)) 20px 0px / 20px 5px,
-                    linear-gradient(to bottom, var(--pant) 100px, var(--shoe) 100px)
-                !important;
-                background-repeat: no-repeat !important;
-            }
-
-            .leg .face.leg-design-dark {
-                background: linear-gradient(to bottom, var(--pant-dark) 100px, var(--shoe-dark) 100px);
-            }
-
-            .leg .front {
-                transform: translateZ(20px);
-            }
-
-            .leg .back {
-                transform: rotateY(180deg) translateZ(20px);
-            }
-
-            .leg .left {
-                transform: rotateY(-90deg) translateZ(20px);
-            }
-
-            .leg .right {
-                transform: rotateY(90deg) translateZ(20px);
-            }
-
-            .leg .top {
-                transform: rotateX(90deg) translateZ(20px);
-                /* background: black; */
-            }
-
-            .leg .bottom {
-                transform: rotateX(-90deg) translateZ(100px);
-                background: var(--shoe-dark);
+    
+                .face {
+                    width: 40px;
+                    height: 120px;
+                }
+    
+                .front {
+                    transform: translateZ(20px);
+                    background: linear-gradient(to bottom, var(--pant) 100px, var(--shoe) 100px);
+                }
+    
+                .left {
+                    transform: rotateY(-90deg) translateZ(20px);
+                    background: linear-gradient(to bottom, var(--pant-dark) 100px, var(--shoe-dark) 100px);
+                }
+    
+                .right {
+                    transform: rotateY(90deg) translateZ(20px);
+                    background: linear-gradient(to bottom, var(--pant-dark) 100px, var(--shoe-dark) 100px);
+                }
+    
+                .bottom {
+                    height: 40px;
+                    transform: rotateX(-90deg) translateZ(100px);
+                    background: var(--shoe-dark);
+                }
+    
+                &.left-leg {
+                    left: 60px;
+                }
+    
+                &.right-leg {
+                    left: 100px;
+    
+                    .front {
+                        background:
+                            linear-gradient(var(--shirt)) 30px 0px / 10px 10px,
+                            linear-gradient(var(--shirt)) 20px 0px / 20px 5px,
+                            linear-gradient(to bottom, var(--pant) 100px, var(--shoe) 100px);
+                        background-repeat: no-repeat;
+                    }
+                }
             }
         }
     </style>
-</head>
-
-<body>
-
-    <div class="hover-area">
-        <div class="r1c1"></div>
-        <div class="r1c2"></div>
-        <div class="r1c3"></div>
-        <div class="r1c4"></div>
-        <div class="r1c5"></div>
-        <div class="r2c1"></div>
-        <div class="r2c2"></div>
-        <div class="r2c3"></div>
-        <div class="r2c4"></div>
-        <div class="r2c5"></div>
-        <div class="r3c1"></div>
-        <div class="r3c2"></div>
-        <div class="r3c3"></div>
-        <div class="r3c4"></div>
-        <div class="r3c5"></div>
-        <div class="r4c1"></div>
-        <div class="r4c2"></div>
-        <div class="r4c3"></div>
-        <div class="r4c4"></div>
-        <div class="r4c5"></div>
-        <div class="r5c1"></div>
-        <div class="r5c2"></div>
-        <div class="r5c3"></div>
-        <div class="r5c4"></div>
-        <div class="r5c5"></div>
-
-        <!-- 
-         - Some faces are left 
-         - to handle sub pixel rendering issues.
-         -->
-        <div class="steve">
-            <div class="cube head">
-                <div class="face front"></div>
-                <div class="face back"></div>
-                <div class="face left"></div>
-                <div class="face right"></div>
-                <div class="face top"></div>
-                <div class="face bottom"></div>
-            </div>
-
-            <div class="cube torso">
-                <div class="face front"></div>
-                <!-- <div class="face back"></div> -->
-                <!-- <div class="face left"></div> -->
-                <!-- <div class="face right"></div> -->
-                <!-- <div class="face top"></div> -->
-                <div class="face bottom"></div>
-            </div>
-
-            <div class="cube arm left-arm">
-                <div class="face front side-design"></div>
-                <!-- <div class="face back side-design"></div> -->
-                <div class="face left side-design-dark"></div>
-                <!-- <div class="face right side-design-dark"></div> -->
-                <div class="face top"></div>
-                <div class="face bottom"></div>
-            </div>
-
-            <div class="cube arm right-arm">
-                <div class="face front side-design"></div>
-                <!-- <div class="face back side-design"></div> -->
-                <!-- <div class="face left side-design-dark"></div> -->
-                <div class="face right side-design-dark"></div>
-                <div class="face top"></div>
-                <div class="face bottom"></div>
-            </div>
-
-            <div class="cube leg left-leg">
-                <div class="face front leg-design"></div>
-                <!-- <div class="face back leg-design"></div> -->
-                <div class="face left leg-design-dark"></div>
-                <!-- <div class="face right leg-design-dark"></div> -->
-                <div class="face top"></div>
-                <div class="face bottom"></div>
-            </div>
-
-            <div class="cube leg right-leg">
-                <div class="face front leg-design"></div>
-                <!-- <div class="face back leg-design"></div> -->
-                <!-- <div class="face left leg-design-dark"></div> -->
-                <div class="face right leg-design-dark"></div>
-                <!-- <div class="face top"></div> -->
-                <div class="face bottom"></div>
-            </div>
-        </div>
-    </div>
 </body>
 
 
