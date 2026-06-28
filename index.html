@@ -47,18 +47,23 @@
 
             <div class="cube torso">
                 <div class="face front"></div>
+                <div class="face back"></div>
+                <div class="face left"></div>
+                <div class="face right"></div>
                 <div class="face bottom"></div>
             </div>
 
             <div class="cube arm left-arm">
                 <div class="face front"></div>
+                <div class="face back"></div>
                 <div class="face left"></div>
                 <div class="face top"></div>
                 <div class="face bottom"></div>
             </div>
-
+            
             <div class="cube arm right-arm">
                 <div class="face front"></div>
+                <div class="face back"></div>
                 <div class="face right"></div>
                 <div class="face top"></div>
                 <div class="face bottom"></div>
@@ -66,13 +71,15 @@
 
             <div class="cube leg left-leg">
                 <div class="face front"></div>
+                <div class="face back"></div>
                 <div class="face left"></div>
                 <div class="face top"></div>
                 <div class="face bottom"></div>
             </div>
-
+            
             <div class="cube leg right-leg">
                 <div class="face front"></div>
+                <div class="face back"></div>
                 <div class="face right"></div>
                 <div class="face bottom"></div>
             </div>
@@ -319,6 +326,16 @@
                     height: 120px;
                 }
     
+                .front {
+                    transform: translateZ(20px);
+                    background:
+                    /* Chest */
+                    linear-gradient(var(--skin)) 30px 0px / 20px 10px,
+                    linear-gradient(var(--skin)) 20px 0px / 40px 5px,
+                    var(--shirt);
+                    background-repeat: no-repeat;
+                }
+
                 /* This face is not visible but is kept there to 
                    handle subpixel rendering issue around the untucked shirt */
                 .bottom {
@@ -327,15 +344,22 @@
                     background: linear-gradient(var(--shirt)) 60px 0px / 20px 40px;
                     background-repeat: no-repeat;
                 }
-    
-                .front {
-                    transform: translateZ(20px);
-                    background:
-                        /* Chest */
-                        linear-gradient(var(--skin)) 30px 0px / 20px 10px,
-                        linear-gradient(var(--skin)) 20px 0px / 40px 5px,
-                        var(--shirt);
-                    background-repeat: no-repeat;
+
+                .left {
+                    transform: rotateY(-90deg) translateZ(20px);
+                    width: 40px;
+                    background: var(--shirt-dark);
+                }
+
+                .right {
+                    transform: rotateY(90deg) translateZ(60px);
+                    width: 40px;
+                    background: var(--shirt-dark);
+                }
+
+                .back {
+                    transform: rotateY(180deg) translateZ(20px);
+                    background: var(--shirt);
                 }
             }
     
@@ -352,41 +376,36 @@
                     height: 120px;
                 }
     
-                .top,
-                .bottom {
-                    height: 40px;
-                }
-    
                 .front {
                     transform: translateZ(20px);
                     background: linear-gradient(to bottom, var(--shirt) 60px, var(--skin) 60px);
                 }
+
+                .back {
+                    transform: rotateY(180deg) translateZ(20px);
+                    background: linear-gradient(to bottom, var(--shirt-dark) 60px, var(--skin-dark) 60px);
+                }
     
                 .left {
                     transform: rotateY(-90deg) translateZ(20px);
+                    background: linear-gradient(to bottom, var(--shirt-dark) 60px, var(--skin-dark) 60px);
                 }
     
                 .right {
                     transform: rotateY(90deg) translateZ(20px);
+                    background: linear-gradient(to bottom, var(--shirt-dark) 60px, var(--skin-dark) 60px);
                 }
     
                 .top {
+                    height: 40px;
                     transform: rotateX(90deg) translateZ(20px);
                     background: var(--shirt);
                 }
     
                 .bottom {
+                    height: 40px;
                     transform: rotateX(-90deg) translateZ(100px);
                     background: var(--skin-dark);
-                }
-    
-    
-                .left {
-                    background: linear-gradient(to bottom, var(--shirt-dark) 60px, var(--skin-dark) 60px);
-                }
-    
-                .right {
-                    background: linear-gradient(to bottom, var(--shirt-dark) 60px, var(--skin-dark) 60px);
                 }
     
                 &.left-arm {
@@ -413,6 +432,11 @@
                 .front {
                     transform: translateZ(20px);
                     background: linear-gradient(to bottom, var(--pant) 100px, var(--shoe) 100px);
+                }
+
+                .back {
+                    transform: rotateY(180deg) translateZ(20px);
+                    background: linear-gradient(to bottom, var(--pant-dark) 100px, var(--shoe-dark) 100px);
                 }
     
                 .left {
