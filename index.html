@@ -179,10 +179,10 @@
             height: 100svh;
             display: grid;
             place-items: center;
-            /* cursor: url("./golden-apple-80x80.webp") 40 40, auto; */
             
             &:has(#herobrine-toggle:checked) {
                 background-color: red;
+                transition: all 1s ease-in;
             }
         }
     
@@ -612,7 +612,7 @@
 
         #herobrine-toggle:checked ~ .steve {
             transform: rotateX(0deg) rotateY(0deg) !important;
-            transition: none !important;
+            transition: transform 1s ease-in !important;
         }
 
         @keyframes blink {
