@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS-Only 3D Minecraft Steve</title>
+    <title>CSS only 3D Minecraft Steve</title>
 </head>
 
 <body>
@@ -182,7 +182,6 @@
             
             &:has(#herobrine-toggle:checked) {
                 background-color: red;
-                transition: all 1s ease-in;
             }
         }
     
@@ -306,7 +305,8 @@
         }
     
         .steve {
-            --pupil: #473581;
+            --iris: #473581;
+            --sclera: #fff;
             --hair: #3c2212;
             --skin: #c68967;
             --nose: #682b1f;
@@ -359,8 +359,8 @@
                     transform: translateZ(40px);
                     background:
                         /* Eyes */
-                        linear-gradient(to right, white 10px, var(--pupil) 0 20px, transparent 20px) 10px 40px / 30px 10px,
-                        linear-gradient(to right, transparent 10px, var(--pupil) 0 20px, white 0 30px, transparent 30px) 40px 40px / 30px 10px,
+                        linear-gradient(to right, var(--sclera) 10px, var(--iris) 0 20px, transparent 20px) 10px 40px / 30px 10px,
+                        linear-gradient(to right, transparent 10px, var(--iris) 0 20px, var(--sclera) 0 30px, transparent 30px) 40px 40px / 30px 10px,
                         /* Nose */
                         linear-gradient(var(--nose)) 30px 50px / 20px 10px,
                         /* Mouth */
@@ -376,34 +376,7 @@
                         /* Skin */
                         var(--skin);
                     background-repeat: no-repeat;
-
-                    /* Left eye lash */
-                    &::before {
-                        content: "";
-                        background-color: var(--skin-dark);
-                        position: absolute;
-                        left: 10px;
-                        top: 40px;
-                        display: block;
-                        width: 20px;
-                        height: 10px;
-                        animation: blink 4s infinite;
-                        opacity: 0;
-                    }
-                    
-                    /* right eye lash */
-                    &::after {
-                        content: "";
-                        background-color: var(--skin-dark);
-                        position: absolute;
-                        left: 50px;
-                        top: 40px;
-                        display: block;
-                        width: 20px;
-                        height: 10px;
-                        animation: blink 4s infinite;
-                        opacity: 0;
-                    }
+                    animation: blink 4s infinite;
                 }
 
     
@@ -492,8 +465,6 @@
                     background: var(--shirt);
                 }
             }
-    
-    
     
     
             .arm {
@@ -603,11 +574,9 @@
             }
         }
 
-        #herobrine-toggle:checked + .steve .head .front::before,
-        #herobrine-toggle:checked + .steve .head .front::after {
+        #herobrine-toggle:checked + .steve .head .front {
+            --iris: #fff;
             animation: none !important;
-            background-color: white !important;
-            opacity: 1 !important;
         }
 
         #herobrine-toggle:checked ~ .steve {
@@ -617,11 +586,13 @@
 
         @keyframes blink {
             0%, 47%, 53%, 100% {
-                opacity: 0;
+                --iris: #473581;
+                --sclera: #fff;                
             }
 
             50% {
-                opacity: 1;
+                --iris: var(--skin);
+                --sclera: var(--skin);
             }
         }
     </style>
